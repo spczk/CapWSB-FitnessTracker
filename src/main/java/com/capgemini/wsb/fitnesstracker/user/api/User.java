@@ -45,5 +45,9 @@ public class User {
         this.email = email;
     }
 
+    public void setBirthdate(LocalDate birthdate) {
+        this.birthdate = birthdate;
+    }
+
 }
 
