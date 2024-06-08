@@ -57,4 +57,9 @@ public class TrainingServiceImpl implements TrainingProvider {
         return trainingRepository.findByActivityType(activityType);
     }
 
+    public List<Training> getTrainingsWithDistanceGreaterThan(final double distance)
+    {
+        return trainingRepository.findByDistanceGreaterThan(distance);
+    }
+
 }

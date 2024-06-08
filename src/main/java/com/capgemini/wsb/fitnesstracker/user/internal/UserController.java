@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 
-@RestController
+@RestController("UserController")
 @RequestMapping("/v1/users")
 @RequiredArgsConstructor
 class UserController {
