@@ -42,5 +42,10 @@ interface TrainingRepository extends JpaRepository<Training, Long> {
                         .filter(training -> training.getActivityType().equals(activityType)).toList();
     }
 
+    default List<Training> findByDistanceGreaterThan(double distance) {
+        return findAll().stream()
+                        .filter(training -> training.getDistance() > distance).toList();
+    }
+
 
 }

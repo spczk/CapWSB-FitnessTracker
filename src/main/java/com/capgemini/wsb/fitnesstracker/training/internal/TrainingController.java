@@ -59,4 +59,9 @@ class UserController {
         training.setDistance(trainingDto.distance());
         return trainingService.updateTraining(training);
     }
+
+    @GetMapping("/distance_greater_than/{distance}")
+    public List<Training> getTrainingsWithDistanceGreaterThan(@PathVariable Double distance) {
+        return trainingService.getTrainingsWithDistanceGreaterThan(distance);
+    }
 }
